@@ -14,7 +14,6 @@ namespace ModifyData
     /// </summary>
     [BurstCompile]
     [DisableAutoCreation] // Unity will not this System Automatically
-    [RequireMatchingQueriesForUpdate] // Only Run OnUpdate when any All Query code used in this struct/class is not empty - Not including Update Itself
     public partial struct RotateSystem : ISystem, ISystemStartStop
     {
         EntityQuery query;

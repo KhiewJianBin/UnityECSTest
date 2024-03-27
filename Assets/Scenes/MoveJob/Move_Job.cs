@@ -4,7 +4,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Jobs;
 
-public class SinMove_Job : MonoBehaviour
+public class Move_Job : MonoBehaviour
 {
     public int SpawnSize = 10000;
 
@@ -51,14 +51,6 @@ public class SinMove_Job : MonoBehaviour
         zMoveJob.Schedule(transformArray, cosMoveJobHandle);
     }
 }
-
-
-
-
-
-
-
-
 
 /// <summary>
 /// Special Job to run in parallel for manipulation transforms

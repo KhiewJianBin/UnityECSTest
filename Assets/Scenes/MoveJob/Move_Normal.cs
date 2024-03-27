@@ -1,7 +1,7 @@
 using UnityEngine;
 using Unity.Mathematics;
 
-public class SinMove_Normal : MonoBehaviour
+public class Move_Normal : MonoBehaviour
 {
     public int SpawnSize = 10_000;
 

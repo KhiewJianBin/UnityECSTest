@@ -11,7 +11,6 @@ namespace ModifyData
     /// </summary>
     [BurstCompile]
     [DisableAutoCreation] // Unity will not this System Automatically
-    [RequireMatchingQueriesForUpdate] // Only Run OnUpdate when any Query code used in the struct is valid
     public partial class RotateManagedSystem : SystemBase
     {
         protected override void OnCreate() { }
