@@ -4,7 +4,7 @@ using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
 
-namespace SharedFilter
+namespace ChangeFilter
 {
     /// <summary>
     /// Unmanaged System
