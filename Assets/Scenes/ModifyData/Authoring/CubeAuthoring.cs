@@ -12,7 +12,11 @@ namespace ModifyData
                 var entity = GetEntity(TransformUsageFlags.Dynamic); // Indicate to allow transform changes in runtime
 
                 // Create & Add Rotate Component
-                AddComponent(entity, new Rotate());
+                Rotate rotate = new Rotate
+                {
+                    Speed = new Vector3(1, 0, 0)
+                };
+                AddComponent(entity, rotate);
             }
         }
     }

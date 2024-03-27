@@ -6,14 +6,16 @@ namespace ModifyData
     /// <summary>
     /// Setup World
     /// </summary>
-    public class ModifyDataSubsceneAuthoring : MonoBehaviour
+    public class ModifyDataSubSceneAuthoring : MonoBehaviour
     {
-        class Baker : Baker<ModifyDataSubsceneAuthoring>
+        class Baker : Baker<ModifyDataSubSceneAuthoring>
         {
-            public override void Bake(ModifyDataSubsceneAuthoring authoring)
+            public override void Bake(ModifyDataSubSceneAuthoring authoring)
             {
                 // 1. Setup The Game's Initial Systems Here
-                var rotateSystemHandle = World.DefaultGameObjectInjectionWorld.CreateSystem<RotateManagedSystem>();
+                var rotateSystemHandle = World.DefaultGameObjectInjectionWorld.CreateSystem<RotateSystem>();
+                //var rotateSystemHandle = World.DefaultGameObjectInjectionWorld.CreateSystem<RotateManagedSystem>();
+
 
                 // 2. Find Existing SystemGroup to add
                 var InitSG = World.DefaultGameObjectInjectionWorld.GetExistingSystemManaged<InitializationSystemGroup>();

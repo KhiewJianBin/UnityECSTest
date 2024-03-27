@@ -18,11 +18,11 @@ public class CustomWorld : ICustomBootstrap
         World customWorld = new World("Custom World");
 
         // 2. Add Systems
-        Type[] systems = new Type[] 
-        { 
-            typeof(RotateSystem) 
-        };
-        DefaultWorldInitialization.AddSystemsToRootLevelSystemGroups(customWorld, systems);
+        //Type[] systems = new Type[] 
+        //{ 
+        //    typeof(RotateSystem) 
+        //};
+        //DefaultWorldInitialization.AddSystemsToRootLevelSystemGroups(customWorld, systems);
 
         // 3. Add world to PlayerLoop to Update the world
         ScriptBehaviourUpdateOrder.AppendWorldToCurrentPlayerLoop(customWorld);
