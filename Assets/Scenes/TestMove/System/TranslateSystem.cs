@@ -9,7 +9,6 @@ using Unity.Transforms;
 /// </summary>
 [RequireMatchingQueriesForUpdate] // Only Run OnUpdate when there's valid Queries
 [DisableAutoCreation]
-[UpdateInGroup(typeof(SimulationSystemGroup))] // Set Parent System
 [UpdateBefore(typeof(Rotate))] // Set Child Order
 public partial class TranslateSystem : SystemBase
 {
@@ -149,15 +148,6 @@ public partial class TranslateSystem : SystemBase
 
         //var singleton = SystemAPI.GetSingleton<FooECBSystem.Singleton>();
         //EntityCommandBuffer ecb = singleton.CreateCommandBuffer(state.WorldUnmanaged);
-
-
-
-        // Example Inline Job
-        //Job.WithCode(() =>
-        //{
-
-        //}).Schedule();
-
 
         //state.GetEntityQuery()
         //var handle = new JobHandle().Schedule(state.Dependency);

@@ -9,7 +9,6 @@ using Unity.Transforms;
 [BurstCompile]
 [RequireMatchingQueriesForUpdate] // Only Run OnUpdate when there's valid Queries
 [DisableAutoCreation]
-[UpdateInGroup(typeof(SimulationSystemGroup))] // Set Parent System
 [UpdateAfter(typeof(Translate))] // Set Child Order
 public partial struct RotateSystem : ISystem , ISystemStartStop
 {
