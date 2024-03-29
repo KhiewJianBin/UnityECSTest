@@ -10,10 +10,7 @@ namespace Toggle
     public partial struct InitToggleSceneSystem : ISystem, ISystemStartStop
     {
         [BurstCompile]
-        public void OnCreate(ref SystemState state) 
-        {
-            state.RequireForUpdate<ToggleSubSceneLoaded>();
-        }
+        public void OnCreate(ref SystemState state) { }
         public void OnDestroy(ref SystemState state) { }
         public void OnStartRunning(ref SystemState state) { }
         public void OnStopRunning(ref SystemState state) { }
@@ -33,7 +30,7 @@ namespace Toggle
 
             var rotate = new Rotate
             {
-                Speed = new float3(1, 0, 0)
+                Speed = new float3(100, 0, 0)
             };
 
             var entity = state.EntityManager.CreateEntity();

@@ -1,7 +1,5 @@
 using Unity.Burst;
 using Unity.Entities;
-using Unity.Mathematics;
-using Unity.Transforms;
 using UnityEngine;
 
 namespace Toggle
@@ -13,7 +11,6 @@ namespace Toggle
         public void OnCreate(ref SystemState state) 
         {
             state.RequireForUpdate<ToggleManagerManaged>();
-            state.RequireForUpdate<ToggleSubSceneLoaded>();
         }
         public void OnDestroy(ref SystemState state) { }
         public void OnStartRunning(ref SystemState state) { }
