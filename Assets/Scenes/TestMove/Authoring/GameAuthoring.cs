@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine;
 
@@ -13,7 +11,7 @@ public class GameAuthoring : MonoBehaviour
         public override void Bake(GameAuthoring authoring)
         {
             // 1. Setup The Game's Initial Systems Here
-            var rotateSystemHandle = World.DefaultGameObjectInjectionWorld.CreateSystem<RotateSystem>();
+            //var rotateSystemHandle = World.DefaultGameObjectInjectionWorld.CreateSystem<RotateSystem>();
             var translateSystemHandle = World.DefaultGameObjectInjectionWorld.CreateSystem<TranslateSystem>();
             
             // 2. Find Existing SystemGroup to add
@@ -24,7 +22,7 @@ public class GameAuthoring : MonoBehaviour
             // 3. Add System to Appropriate Group
             if (rootSys2 != null)
             {
-                rootSys2.AddSystemToUpdateList(rotateSystemHandle);
+                //rootSys2.AddSystemToUpdateList(rotateSystemHandle);
                 rootSys2.AddSystemToUpdateList(translateSystemHandle);
             }
         }
