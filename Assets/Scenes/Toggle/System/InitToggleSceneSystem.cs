@@ -30,7 +30,7 @@ namespace Toggle
 
             var rotate = new Rotate
             {
-                Speed = new float3(100, 0, 0)
+                Speed = new float3(200, 0, 0)
             };
 
             var entity = state.EntityManager.CreateEntity();
