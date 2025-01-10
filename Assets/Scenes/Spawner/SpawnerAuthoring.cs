@@ -33,12 +33,12 @@ class SpawnerAuthoring : MonoBehaviour
 
 
 
-            var entity = GetEntity(TransformUsageFlags.None);
+            var entity = GetEntity(TransformUsageFlags.Dynamic);
             AddComponent(entity, new Spawner
             {
                 // By default, each authoring GameObject turns into an Entity.
                 // Given a GameObject (or authoring component), GetEntity looks up the resulting Entity.
-                Prefab = GetEntity(authoring.Prefab, TransformUsageFlags.Dynamic),
+                EntityPrefab = GetEntity(authoring.Prefab, TransformUsageFlags.Dynamic),
                 SpawnPosition = authoring.transform.position,
                 NextSpawnTime = 0.0f,
                 SpawnRate = authoring.SpawnRate
@@ -49,7 +49,7 @@ class SpawnerAuthoring : MonoBehaviour
 
 public struct Spawner : IComponentData
 {
-    public Entity Prefab;
+    public Entity EntityPrefab;
     public float3 SpawnPosition;
     public float NextSpawnTime;
     public float SpawnRate;

@@ -1,6 +1,7 @@
 using Unity.Entities;
 using Unity.Transforms;
 using Unity.Burst;
+using Unity.Mathematics;
 
 [BurstCompile]
 [DisableAutoCreation]
@@ -47,8 +48,9 @@ public partial struct ProcessSpawnerJob : IJobEntity
         if (spawner.NextSpawnTime < ElapsedTime)
         {
             // Spawns a new entity and positions it at the spawner.
-            Entity newEntity = Ecb.Instantiate(chunkIndex, spawner.Prefab);
-            Ecb.SetComponent(chunkIndex, newEntity, LocalTransform.FromPosition(spawner.SpawnPosition));
+            Entity newEntity = Ecb.Instantiate(chunkIndex, spawner.EntityPrefab);
+            var pos = spawner.SpawnPosition + new float3((float)ElapsedTime, 0, 0);
+            Ecb.SetComponent(chunkIndex, newEntity, LocalTransform.FromPosition(pos));
 
             // Resets the next spawn time.
             spawner.NextSpawnTime = (float)ElapsedTime + spawner.SpawnRate;
