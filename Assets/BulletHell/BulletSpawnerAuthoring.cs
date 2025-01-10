@@ -6,7 +6,7 @@ namespace Examples.BulletHell
 
     public class BulletSpawnerAuthoring : MonoBehaviour
     {
-        // MonoBehaviour Info to transfer to Entity World
+        // Add MonoBehaviour Info here to transfer to Entity World
         public GameObject BulletPrefab;
         public float SpawnRate;
 

@@ -1,6 +1,5 @@
 namespace Examples.BulletHell
 {
-    using System.Numerics;
     using Unity.Burst;
     using Unity.Entities;
     using Unity.Mathematics;
